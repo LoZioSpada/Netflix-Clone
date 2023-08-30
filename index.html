@@ -8,17 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="icon" href="assets/imgs/favicon.ico">
-    <title>Home - Netflix</title> <!-- aggiungere immagine della N di netflix -->
+    <link rel="icon" href="assets/imgs/favicon.ico"> <!-- aggiunge immagine della N di netflix nella scheda-->
+    <title>Home - Netflix</title>
   </head>
   <body>
-    
-    <!-- navbar -->    
-    <nav class="navbar navbar-expand-lg px-5 flex-nowrap w-100">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg px-5 flex-nowrap w-100 mb-5">
       <a href="#">
         <img src="assets/imgs/Netflix_Logo_RGB.png" class="logo">
       </a>
-    
+
       <button class="navbar-toggler bg-white order-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,18 +27,18 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
          </svg>
-         <input id="input" class="form-control mr-sm-2 bg-transparent rounded-0 border border-light pl-5" type="search" placeholder="Search..." aria-label="Search">
+         <input id="input" class="form-control mr-sm-2 bg-transparent rounded-0 border border-light pl-5 text-white" type="search" placeholder="Search..." aria-label="Search">
          </div>
 
          <div class="nav-item dropdown order-2 order-md-4"> <!-- profilo -->
           <a class="nav-link dropdown-toggle right" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           <img src="assets/imgs/avatar-1.jpg" alt="avatar-1.jpg">
           </a>
-          <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="#">Settings</a>
+          <div class="dropdown-menu dropdown-menu-right bg-dark">
+          <a class="dropdown-item text-white" href="#">Profile</a>
+          <a class="dropdown-item text-white" href="#">Settings</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Exit</a>
+          <a class="dropdown-item text-white" href="#">Exit</a>
           </div>
         </div>
 
@@ -47,20 +47,20 @@
 
         <div class="notification order-md-3">
           <div class="nav-item dropdown d-none d-md-block"> <!-- notifiche -->
-            <a class="nav-link dropdown-toggle right" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle right px-0" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
               </svg>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">                
-              <a class="dropdown-item" href="#">Notification 1</a>
-              <a class="dropdown-item" href="#">Notification 2</a>
-              <a class="dropdown-item" href="#">Notification 3</a>
+            <div class="dropdown-menu dropdown-menu-right bg-dark">
+              <a class="dropdown-item text-white" href="#">Notification 1</a>
+              <a class="dropdown-item text-white" href="#">Notification 2</a>
+              <a class="dropdown-item text-white" href="#">Notification 3</a>
             </div>
           </div>
         </div>
-            
-        
+
+
 
         <div class="collapse navbar-collapse order-3 order-md-0" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -80,22 +80,436 @@
               <a class="nav-link" href="#">My List</a>
             </li>
           </ul>
-          
-          <!-- <form class="form-inline position-relative my-2 my-lg-0 text-white">   -->
-            
-             <!-- ricerca -->
-            
-
-            
-            
-            
-
-          <!-- </form> -->
         </div>
       </nav>
 
+      <!-- categoria scelta -->
+      <div class="mx-5 mb-5 d-flex justify-content-between align-items-center">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <h1 class="mr-5">TV Shows</h1>
+            <div class="dropdown">
+              <a id="dropdownGenre" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Genres
+              </a>
 
+              <div class="dropdown-menu bg-dark">
+                <a class="dropdown-item text-white" href="#">Action</a>
+                <a class="dropdown-item text-white" href="#">Anime</a>
+                <a class="dropdown-item text-white" href="#">Drama</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex">
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-text-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+              <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+            </svg>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- carosello -->
       
+      <div id="carouselExampleControls" class="carousel slide mx-5" data-ride="carousel" data-interval="false">
+        <h2 class="mb-4">Trending Now</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-6 col-md-2">
+                        <div class="card border-0">
+                            <div class="image-wrapper d-block w-100">
+                                <img src="/assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body w-100 h-100">
+                                <div>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                                  <h5 class="movieTitle">Title</h5>
+                                  <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                      <div class="card border-0">
+                        <div class="image-wrapper d-block w-100">
+                            <img src="/assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="card-body w-100 h-100">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                              <h5 class="movieTitle">Title</h5>
+                              <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                      <div class="card border-0">
+                          <div class="image-wrapper d-block w-100">
+                              <img src="/assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="card-body w-100 h-100">
+                              <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <h5 class="movieTitle">Title</h5>
+                                <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6 col-md-2">
+                    <div class="card border-0">
+                        <div class="image-wrapper d-block w-100">
+                            <img src="/assets/imgs/movies/4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="card-body w-100 h-100">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                              <h5 class="movieTitle">Title</h5>
+                              <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card border-0">
+                      <div class="image-wrapper d-block w-100">
+                          <img src="/assets/imgs/movies/5.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="card-body w-100 h-100">
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                            <h5 class="movieTitle">Title</h5>
+                            <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-6 col-md-2">
+                <div class="card border-0">
+                    <div class="image-wrapper d-block w-100">
+                        <img src="/assets/imgs/movies/6.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="card-body w-100 h-100">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                          <h5 class="movieTitle">Title</h5>
+                          <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                  <div class="col-6 col-md-2">
+                    <div class="card border-0">
+                        <div class="image-wrapper d-block w-100">
+                            <img src="/assets/imgs/movies/7.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="card-body w-100 h-100">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                              <h5 class="movieTitle">Title</h5>
+                              <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card border-0">
+                      <div class="image-wrapper d-block w-100">
+                          <img src="/assets/imgs/movies/8.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="card-body w-100 h-100">
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                            <h5 class="movieTitle">Title</h5>
+                            <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-6 col-md-2">
+                <div class="card border-0">
+                    <div class="image-wrapper d-block w-100">
+                        <img src="/assets/imgs/movies/9.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="card-body w-100 h-100">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                          <h5 class="movieTitle">Title</h5>
+                          <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <div class="card border-0">
+                  <div class="image-wrapper d-block w-100">
+                      <img src="/assets/imgs/movies/10.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="card-body w-100 h-100">
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                        <h5 class="movieTitle">Title</h5>
+                        <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="card border-0">
+                <div class="image-wrapper d-block w-100">
+                    <img src="/assets/imgs/movies/11.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="card-body w-100 h-100">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg>
+                      <h5 class="movieTitle">Title</h5>
+                      <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card border-0">
+              <div class="image-wrapper d-block w-100">
+                  <img src="/assets/imgs/movies/12.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="card-body w-100 h-100">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    <h5 class="movieTitle">Title</h5>
+                    <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                  <div class="col-6 col-md-2">
+                    <div class="card border-0">
+                        <div class="image-wrapper d-block w-100">
+                            <img src="/assets/imgs/movies/13.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="card-body w-100 h-100">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                              <h5 class="movieTitle">Title</h5>
+                              <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                  <div class="card border-0">
+                      <div class="image-wrapper d-block w-100">
+                          <img src="/assets/imgs/movies/14.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="card-body w-100 h-100">
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                            <h5 class="movieTitle">Title</h5>
+                            <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-6 col-md-2">
+                <div class="card border-0">
+                    <div class="image-wrapper d-block w-100">
+                        <img src="/assets/imgs/movies/15.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="card-body w-100 h-100">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                          <h5 class="movieTitle">Title</h5>
+                          <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <div class="card border-0">
+                  <div class="image-wrapper d-block w-100">
+                      <img src="/assets/imgs/movies/16.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="card-body w-100 h-100">
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                        <h5 class="movieTitle">Title</h5>
+                        <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="card border-0">
+                <div class="image-wrapper d-block w-100">
+                    <img src="/assets/imgs/movies/17.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="card-body w-100 h-100">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg>
+                      <h5 class="movieTitle">Title</h5>
+                      <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card border-0">
+              <div class="image-wrapper d-block w-100">
+                  <img src="/assets/imgs/movies/18.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="card-body w-100 h-100">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    <h5 class="movieTitle">Title</h5>
+                    <p class="movieDescr">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+                </div>
+            </div>
+             <button class="carousel-control-prev justify-content-start" type="button" data-target="#carouselExampleControls"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next justify-content-end" type="button" data-target="#carouselExampleControls"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
