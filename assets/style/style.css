@@ -91,6 +91,10 @@ nav{
     overflow: visible;
 }
 
+#carouselExampleControls2 .carousel-inner {
+    overflow: visible;
+}
+
 .carousel-item {
     z-index: 1;
     transition: z-index 0.75s ease-in-out;
