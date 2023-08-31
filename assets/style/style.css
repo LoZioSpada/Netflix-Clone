@@ -278,3 +278,7 @@ footer {
     color: white;
     border: 1px white solid;
 }
+
+.credits {
+    font-size: 12px;
+}
