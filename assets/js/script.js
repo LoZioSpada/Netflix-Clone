@@ -17,3 +17,25 @@ input.addEventListener('blur', () => {
         input.style.display = 'none';
     }
 });
+
+// scrivo una funzione dove, allo scroll della pagina, fa apparire il carorello successivo
+const sections = document.querySelectorAll(".scroll-section");
+
+function checkScroll(){
+    const windowHeight = window.innerHeight;    
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        
+
+        if (rect.top <= windowHeight * 0.9){
+            section.classList.add("visible");
+        } else{
+            section.classList.remove("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", checkScroll);
+window.addEventListener("load", checkScroll);
+
+checkScroll();

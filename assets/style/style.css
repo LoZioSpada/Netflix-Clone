@@ -15,8 +15,9 @@ nav{
     background: rgb(12,12,12);
     background: linear-gradient(180deg, rgba(12,12,12,1) 50%, rgba(20,20,20,1) 90%);
     color: white;
-    position: sticky;
+    position: sticky!important;
     top: 0;
+    z-index: 4;
 }
 
 .nav-link{
@@ -93,6 +94,25 @@ nav{
 
 #carouselExampleControls2 .carousel-inner {
     overflow: visible;
+}
+
+#carouselExampleControls3 .carousel-inner {
+    overflow: visible;
+}
+
+#carouselExampleControls4 .carousel-inner {
+    overflow: visible;
+}
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .carousel-item {
@@ -186,4 +206,75 @@ nav{
 .carousel-control-next-icon{
     position: absolute;
     left: 20px;
+}
+
+footer {
+    margin-top: 20rem;
+    color: #b3b3b3;
+}
+
+.info{
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.info:hover{   
+    color: white;
+    text-decoration: none;
+}
+
+.bi-facebook{
+    margin-left: 0!important;
+    color: #b3b3b3;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.bi-facebook:hover{
+    color: white;
+}
+
+.bi-instagram{
+    color: #b3b3b3;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.bi-instagram:hover{
+    color: white;
+}
+
+.bi-twitter{
+    color: #b3b3b3;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.bi-twitter:hover{
+    color: white;
+}
+
+.bi-youtube{
+    color: #b3b3b3;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.bi-youtube:hover{
+    color: white;
+}
+
+.service{
+    background: transparent;
+    border: 1px gray solid;
+    color: gray;
+    font-size: 1rem;
+    transition: color border 0.4s ease;
+}
+
+.service:hover{
+    color: white;
+    border: 1px white solid;
 }
