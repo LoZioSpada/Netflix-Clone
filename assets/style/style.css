@@ -11,6 +11,7 @@ body {
     color: white;
 }
 
+/* NAVBAR */
 nav{
     background: rgb(12,12,12);
     background: linear-gradient(180deg, rgba(12,12,12,1) 50%, rgba(20,20,20,1) 90%);
@@ -20,10 +21,15 @@ nav{
     z-index: 4;
 }
 
+
 .nav-link{
     text-decoration: none;
     color: white;
     transition: color 0.4s ease;
+}
+
+.bi-list{
+    color: white;
 }
 
 .nav-link:hover{
@@ -66,6 +72,7 @@ nav{
     
 }
 
+/* SEZIONE SOTTO NAVBAR */
 .bi-text-left{
     border: solid 1px;
     color: white;
@@ -88,6 +95,7 @@ nav{
     color: #b3b3b3;
 }
 
+/* CAROSELLI */
 #carouselExampleControls .carousel-inner {
     overflow: visible;
 }
@@ -104,17 +112,18 @@ nav{
     overflow: visible;
 }
 
-.scroll-section {
+.scroll-section {   /* CAROSELLO CHE APPARE */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.scroll-section.visible {
+.scroll-section.visible { /* CAROSELLO CHE APPARE */
     opacity: 1;
     transform: translateY(0);
 }
 
+/* CARDS DEL CAROSELLO */
 .carousel-item {
     z-index: 1;
     transition: z-index 0.75s ease-in-out;
@@ -208,6 +217,7 @@ nav{
     left: 20px;
 }
 
+/* FOOTER */
 footer {
     margin-top: 20rem;
     color: #b3b3b3;
